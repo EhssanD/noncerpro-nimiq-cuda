@@ -28,22 +28,40 @@ Please consider supporting this project by donating to these addresses (EhssanD)
 Options
 ------------------------------------------
 ```
-  -a, --address    Nimiq wallet address                      [string] [required]
-  -s, --server     Pool server address
-                   Default: us.nimpool.io                               [string]
-  -p, --port       Pool server port
-                   Default: 8444                                        [number]
-  -d, --devices    Active GPUs
-                   Example: -d=0 1 3
-                   Default: All available GPUs                           [array]
-  -t, --threads    Number of threads per GPU
-                   Example: -t=2 or -t=2 2 4
-                   Default: 1                                            [array]
-  -b, --batchsize  batchsize per thread.
-                   Example: -b=100 or -b=100 120 200
-                   Default: auto based on available device memory        [array]
-  -h, --help       Show help                                           [boolean]
-  -v, --version    Show version number                                 [boolean]
+  -a, --address         Nimiq wallet address                 [string] [required]
+  -n, --name            Device name                                     [string]
+  -s, --server          Pool server address
+                        multiple addresses or a single string
+                        Example: -s=eu.nimpool.io us.nimiqpocket.com
+                        Default: eu.nimpool.io                           [array]
+  -p, --port            Pool server port
+                        Default: 8444                                    [array]
+  -d, --devices         Active GPUs
+                        Example: -d=0 1 3
+                        Default: All available GPUs                      [array]
+  -t, --threads         Number of threads per GPU
+                        Example: -t=2 or -t=2 2 4
+                        Default: 2                                       [array]
+  -b, --batchsize       batchsize per thread.
+                        Example: -b=100 or -b=100 120 200
+                        Default: auto based on available device memory   [array]
+  -x, --extra           Use this for password or any other extra pool data
+                        Defalut: ''                                     [string]
+  -i, --api             Enable/Disable API
+                        Default: Enable                                [boolean]
+  -o, --apiport         API port
+                        Default: 3000                                   [number]
+  -l, --log             Enable/Disable log file,
+                        Default: true                                  [boolean]
+  --opt, --optimizer    Run parameters optimizer
+                        Miner will ignore gpu.json file and rerun the optimizer.
+                        Default: false                                 [boolean]
+  --diff, --difficulty  Start difficulty
+                        Default: Disabled                               [number]
+  --ao, --autoOptimize  Auto run the optimizer if there is no gpu.json file.
+                        Default: true                                  [boolean]
+  -h, --help            Show help                                      [boolean]
+  -v, --version         Show version number                            [boolean]
 ```
 
 Config file
